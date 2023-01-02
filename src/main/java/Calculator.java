@@ -14,6 +14,30 @@ public class Calculator {
         this.secondNumber = secondNumber;
     }
 
+    public double getFirstNumber() {
+        return firstNumber;
+    }
+
+    public void setFirstNumber(double firstNumber) {
+        this.firstNumber = firstNumber;
+    }
+
+    public String getMathSing() {
+        return mathSing;
+    }
+
+    public void setMathSing(String mathSing) {
+        this.mathSing = mathSing;
+    }
+
+    public double getSecondNumber() {
+        return secondNumber;
+    }
+
+    public void setSecondNumber(double secondNumber) {
+        this.secondNumber = secondNumber;
+    }
+
     static Calculator[] readFile(String fileName) throws FileNotFoundException {
         Scanner scan = new Scanner(new File(fileName));
         int lines = countLines(fileName);
@@ -44,17 +68,17 @@ public class Calculator {
         double result = 0;
         for (Calculator calculator : calculators) {
             if (calculator.mathSing.equals("+")) {
-                result = calculator.firstNumber + calculator.secondNumber;
-                System.out.println(calculator.firstNumber + " + " + calculator.secondNumber + " = " + result);
+                result = calculator.getFirstNumber() + calculator.getSecondNumber();
+                System.out.println(calculator.getFirstNumber() + " + " + calculator.getSecondNumber() + " = " + result);
             } else if (calculator.mathSing.equals("-")) {
-                result = calculator.firstNumber - calculator.secondNumber;
-                System.out.println(calculator.firstNumber + " - " + calculator.secondNumber + " = " + result);
+                result = calculator.getFirstNumber() - calculator.getSecondNumber();
+                System.out.println(calculator.getFirstNumber() + " - " + calculator.getSecondNumber() + " = " + result);
             } else if (calculator.mathSing.equals("*")) {
-                result = calculator.firstNumber * calculator.secondNumber;
-                System.out.println(calculator.firstNumber + " * " + calculator.secondNumber + " = " + result);
+                result = calculator.getFirstNumber() * calculator.getSecondNumber();
+                System.out.println(calculator.getFirstNumber() + " * " + calculator.getSecondNumber() + " = " + result);
             } else if (calculator.mathSing.equals("/")) {
-                result = (calculator.firstNumber / calculator.secondNumber);
-                System.out.println(calculator.firstNumber + " / " + calculator.secondNumber + " = " + result);
+                result = (calculator.getFirstNumber() / calculator.getSecondNumber());
+                System.out.println(calculator.getFirstNumber() + " / " + calculator.getSecondNumber() + " = " + result);
             }
         }
     }
