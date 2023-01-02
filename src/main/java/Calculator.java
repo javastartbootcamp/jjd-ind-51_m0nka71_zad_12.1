@@ -54,7 +54,7 @@ public class Calculator {
                 System.out.println(calculator.firstNumber + " * " + calculator.secondNumber + " = " + result);
             } else if (calculator.mathSing.equals("/")) {
                 result = (calculator.firstNumber / calculator.secondNumber);
-                System.out.println(calculator.firstNumber + " + " + calculator.secondNumber + " = " + result);
+                System.out.println(calculator.firstNumber + " / " + calculator.secondNumber + " = " + result);
             }
         }
     }
